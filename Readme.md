@@ -32,6 +32,7 @@ A robust and scalable backend implementation for a video streaming platform, bui
   - Multer for file uploads
   - Cookie Parser for session management
   - CORS for cross-origin resource sharing
+  - Cloudinary for media storage
 
 ## 🏗️ Architecture
 
@@ -90,21 +91,45 @@ src/
 
 ## 🚀 Getting Started
 
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB (v4.4 or higher)
+- npm or yarn package manager
+
+### Installation
+
 1. Clone the repository
-2. Install dependencies:
+   ```bash
+   git clone https://github.com/yourusername/video-streaming-platform.git
+   cd video-streaming-platform
+   ```
+
+2. Install dependencies
    ```bash
    npm install
    ```
-3. Set up environment variables:
-   ```
-   PORT=8000
-   MONGODB_URI=your_mongodb_uri
-   JWT_SECRET=your_jwt_secret
-   CORS_ORIGIN=your_frontend_url
-   ```
-4. Start the server:
+
+3. Set up environment variables
+   - Create a `.env` file in the root directory
+   - Copy the following variables and set your values:
+     ```
+     PORT=8000
+     MONGODB_URI=your_mongodb_uri
+     JWT_SECRET=your_jwt_secret
+     CORS_ORIGIN=your_frontend_url
+     CLOUDINARY_CLOUD_NAME=your_cloud_name
+     CLOUDINARY_API_KEY=your_api_key
+     CLOUDINARY_API_SECRET=your_api_secret
+     ```
+
+4. Start the server
    ```bash
    npm start
+   ```
+
+5. For development with auto-restart
+   ```bash
+   npm run dev
    ```
 
 ## 🔍 Code Quality & Best Practices
@@ -140,8 +165,24 @@ This project demonstrates proficiency in:
 
 ## 🤝 Contributing
 
-Feel free to submit issues and enhancement requests!
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👤 Author
+
+**Your Name**
+- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
+
+## 🙏 Acknowledgments
+
+- Express.js team for the amazing framework
+- MongoDB team for the powerful database
+- All open-source contributors whose work made this project possible
